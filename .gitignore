@@ -33,8 +33,10 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
-# large media assets
-/public/media/
+# large media originals (compressed versions are tracked)
+/public/media/*_original.*
+/public/media/content-planning.pdf
+/public/media/tryangle-deck.pptx
 
 # vercel
 .vercel
