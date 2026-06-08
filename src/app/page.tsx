@@ -30,6 +30,14 @@ export default function Home() {
     loadProjects();
   }, []);
 
+  const handleMove = (index: number, direction: "up" | "down") => {
+    const swapIndex = direction === "up" ? index - 1 : index + 1;
+    if (swapIndex < 0 || swapIndex >= projects.length) return;
+    const updated = [...projects];
+    [updated[index], updated[swapIndex]] = [updated[swapIndex], updated[index]];
+    setProjects(updated);
+  };
+
   const stats = [
     { num: 27, suffix: "개", label: "시스템 프롬프트" },
     { num: 792, suffix: "+", label: "Git 커밋" },
@@ -262,7 +270,10 @@ export default function Home() {
                 project={project}
                 index={i}
                 isAdmin={isAdmin}
+                isFirst={i === 0}
+                isLast={i === projects.length - 1}
                 onUpdate={loadProjects}
+                onMove={(dir) => handleMove(i, dir)}
               />
             ))}
           </div>

@@ -14,14 +14,20 @@ interface Props {
   project: Project;
   index: number;
   isAdmin: boolean;
+  isFirst: boolean;
+  isLast: boolean;
   onUpdate: () => void;
+  onMove: (direction: "up" | "down") => void;
 }
 
 export default function ProjectCard({
   project,
   index,
   isAdmin,
+  isFirst,
+  isLast,
   onUpdate,
+  onMove,
 }: Props) {
   const [editing, setEditing] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
@@ -228,7 +234,27 @@ export default function ProjectCard({
             </div>
 
             {isAdmin && (
-              <div className="flex gap-2 mt-6">
+              <div className="flex items-center gap-2 mt-6">
+                <div className="flex gap-1 mr-2">
+                  <button
+                    onClick={() => onMove("up")}
+                    disabled={isFirst}
+                    className="w-8 h-8 flex items-center justify-center bg-gray-800 text-gray-400 rounded-lg hover:bg-gray-700 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() => onMove("down")}
+                    disabled={isLast}
+                    className="w-8 h-8 flex items-center justify-center bg-gray-800 text-gray-400 rounded-lg hover:bg-gray-700 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </div>
                 <button
                   onClick={() => setEditing(true)}
                   className="px-4 py-2 bg-blue-950 text-blue-400 text-xs font-medium rounded-lg hover:bg-blue-900 transition-colors"
