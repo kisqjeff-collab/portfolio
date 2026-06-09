@@ -160,14 +160,14 @@ export default function ProjectCard({
                     rel="noopener noreferrer"
                     className="block rounded-2xl overflow-hidden bg-gray-900 border border-gray-700/50 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/5 transition-all ring-1 ring-gray-800 relative group/pdf"
                   >
-                    <div className="aspect-video relative overflow-hidden">
+                    <div className="aspect-[4/3] sm:aspect-video relative overflow-hidden">
                       <iframe
                         src={`${pdf.url}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
-                        className="absolute -inset-4 w-[calc(100%+2rem)] h-[calc(200%+2rem)] border-0 pointer-events-none origin-top"
+                        className="absolute -inset-4 w-[calc(100%+2rem)] h-[calc(300%+2rem)] sm:h-[calc(200%+2rem)] border-0 pointer-events-none origin-top"
                         title="PDF Preview"
                       />
                       <div className="absolute inset-0 pointer-events-none" style={{
-                        boxShadow: "inset 0 0 20px 15px rgb(17 24 39), inset 0 -40px 30px -10px rgb(17 24 39)",
+                        boxShadow: "inset 0 0 12px 8px rgb(17 24 39), inset 0 -20px 20px -5px rgb(17 24 39)",
                       }} />
                     </div>
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/pdf:opacity-100 transition-opacity bg-black/30 backdrop-blur-[2px]">
@@ -197,7 +197,7 @@ export default function ProjectCard({
                     </div>
                   </a>
                 ) : hasVisual ? (
-                  <div className="aspect-video">
+                  <div>
                     <ProjectVisual projectId={project.id} />
                   </div>
                 ) : (

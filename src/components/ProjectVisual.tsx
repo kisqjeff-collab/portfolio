@@ -151,7 +151,7 @@ function AiToolsGrid() {
       <p className="text-xs font-semibold text-violet-400 uppercase tracking-wider mb-4">
         10+ Custom Tools
       </p>
-      <div className="grid grid-cols-3 gap-2.5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
         {tools.map((tool, i) => (
           <motion.div
             key={tool.name}
