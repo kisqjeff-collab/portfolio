@@ -40,7 +40,7 @@ export default function Home() {
 
   const stats = [
     { num: 27, suffix: "개", label: "시스템 프롬프트" },
-    { num: 792, suffix: "+", label: "Git 커밋" },
+    { num: 102, suffix: "+", label: "Git 커밋" },
     { num: 6, suffix: "+", label: "AI 모델 운용" },
     { num: 70, suffix: "%", label: "비용 절감" },
   ];
@@ -306,7 +306,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-gray-500 text-sm mb-10">
-              커밋 792개 · 시스템 프롬프트 27개 · AI 모델 6개+ 실무 운영 · 비용
+              커밋 102개 · 시스템 프롬프트 27개 · AI 모델 6개+ 실무 운영 · 비용
               70% 절감
             </p>
           </ScrollReveal>

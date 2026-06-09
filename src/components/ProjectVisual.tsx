@@ -128,7 +128,7 @@ function ZzemPipeline() {
         ))}
       </div>
       <div className="mt-6 flex gap-3">
-        {["27 prompts", "6+ models", "792 commits"].map((stat, i) => (
+        {["27 prompts", "6+ models", "102 commits"].map((stat, i) => (
           <motion.div
             key={stat}
             initial={{ y: 10, opacity: 0 }}
