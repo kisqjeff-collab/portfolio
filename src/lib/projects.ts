@@ -70,20 +70,6 @@ export const defaultProjects: Project[] = [
     updatedAt: Date.now(),
   },
   {
-    id: "gyeonggi-north",
-    title: "경기북부발전 AI 콘텐츠 캠프",
-    subtitle: "2025.07 · 장려상 수상",
-    description:
-      "경기도 북부 미래 발전을 AI 스토리 영상으로 제작. 기획 및 영상 제작 참여.",
-    tags: ["AI 영상", "공모전", "수상"],
-    category: "contest",
-    media: [{ type: "video", url: "/media/gyeonggi-north.mp4" }],
-    order: 3,
-    visible: true,
-    createdAt: Date.now(),
-    updatedAt: Date.now(),
-  },
-  {
     id: "kia",
     title: "기아 크리에이터 8기",
     subtitle: "2025.08 — 2025.11 · 팀장",
@@ -92,7 +78,7 @@ export const defaultProjects: Project[] = [
     tags: ["AI 영상", "브랜드", "팀장"],
     category: "activity",
     media: [{ type: "video", url: "/media/kia.mp4" }],
-    order: 4,
+    order: 3,
     visible: true,
     createdAt: Date.now(),
     updatedAt: Date.now(),
@@ -106,62 +92,21 @@ export const defaultProjects: Project[] = [
     tags: ["AI 영상", "공모전", "뮤직비디오"],
     category: "contest",
     media: [{ type: "video", url: "/media/gyeonggi-travel.mp4" }],
+    order: 4,
+    visible: true,
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+  },
+  {
+    id: "tryangle",
+    title: "TryAngle IR Deck",
+    subtitle: "사내 AI 해커톤 · IR 발표",
+    description:
+      "AI Native Camp 해커톤에서 제작한 IR 덱. 문제 정의부터 솔루션, 비즈니스 모델까지 팀 TryAngle의 발표 자료.",
+    tags: ["해커톤", "IR", "기획"],
+    category: "hackathon",
+    media: [{ type: "pdf", url: "/media/tryangle-deck.pdf" }],
     order: 5,
-    visible: true,
-    createdAt: Date.now(),
-    updatedAt: Date.now(),
-  },
-  {
-    id: "chai",
-    title: "CHAI AI 광고 공모전",
-    subtitle: "팀장 · AI 콘텐츠 기획 및 영상 제작",
-    description:
-      "AI를 활용한 브랜드 광고 영상 기획부터 최종 편집까지 전 과정 리드.",
-    tags: ["AI 영상", "공모전", "광고"],
-    category: "contest",
-    media: [{ type: "video", url: "/media/chai.mp4" }],
-    order: 6,
-    visible: true,
-    createdAt: Date.now(),
-    updatedAt: Date.now(),
-  },
-  {
-    id: "osulloc",
-    title: "아모레퍼시픽 AI 영상 공모전",
-    subtitle: "팀원 (3인) · 오설록 광고영상 기획·제작",
-    description:
-      "AI 이미지 생성부터 영상 편집, 기획을 효과적으로 전달할 수 있도록 노력.",
-    tags: ["AI 영상", "공모전", "광고"],
-    category: "contest",
-    media: [{ type: "video", url: "/media/osulloc.mp4" }],
-    order: 7,
-    visible: true,
-    createdAt: Date.now(),
-    updatedAt: Date.now(),
-  },
-  {
-    id: "gohunjin",
-    title: "고훈진 AI 영상 공모전",
-    subtitle: "개인 · 화장품 시네마틱 AI 영상",
-    description: "화장품 브랜드의 프리미엄 이미지를 시네마틱 AI 영상으로 표현.",
-    tags: ["AI 영상", "공모전", "시네마틱"],
-    category: "contest",
-    media: [{ type: "video", url: "/media/gohunjin.mp4" }],
-    order: 8,
-    visible: true,
-    createdAt: Date.now(),
-    updatedAt: Date.now(),
-  },
-  {
-    id: "restonic",
-    title: "레스토닉 AI 영상 공모전",
-    subtitle: "개인 · 매트리스 브랜드 AI 광고",
-    description:
-      "제품 특성을 살린 AI 영상 광고 컨셉 기획부터 제작까지 1인 완수.",
-    tags: ["AI 영상", "공모전", "광고"],
-    category: "contest",
-    media: [{ type: "video", url: "/media/restonic.mp4" }],
-    order: 9,
     visible: true,
     createdAt: Date.now(),
     updatedAt: Date.now(),
@@ -182,20 +127,75 @@ export const defaultProjects: Project[] = [
       { type: "image", url: "/media/design-product-1.png" },
       { type: "image", url: "/media/design-product-2.png" },
     ],
+    order: 6,
+    visible: true,
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+  },
+  {
+    id: "gyeonggi-north",
+    title: "경기북부발전 AI 콘텐츠 캠프",
+    subtitle: "2025.07 · 장려상 수상",
+    description:
+      "경기도 북부 미래 발전을 AI 스토리 영상으로 제작. 기획 및 영상 제작 참여.",
+    tags: ["AI 영상", "공모전", "수상"],
+    category: "contest",
+    media: [{ type: "video", url: "/media/gyeonggi-north.mp4" }],
+    order: 7,
+    visible: true,
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+  },
+  {
+    id: "chai",
+    title: "CHAI AI 광고 공모전",
+    subtitle: "팀장 · AI 콘텐츠 기획 및 영상 제작",
+    description:
+      "AI를 활용한 브랜드 광고 영상 기획부터 최종 편집까지 전 과정 리드.",
+    tags: ["AI 영상", "공모전", "광고"],
+    category: "contest",
+    media: [{ type: "video", url: "/media/chai.mp4" }],
+    order: 8,
+    visible: true,
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+  },
+  {
+    id: "osulloc",
+    title: "아모레퍼시픽 AI 영상 공모전",
+    subtitle: "팀원 (3인) · 오설록 광고영상 기획·제작",
+    description:
+      "AI 이미지 생성부터 영상 편집, 기획을 효과적으로 전달할 수 있도록 노력.",
+    tags: ["AI 영상", "공모전", "광고"],
+    category: "contest",
+    media: [{ type: "video", url: "/media/osulloc.mp4" }],
+    order: 9,
+    visible: true,
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+  },
+  {
+    id: "gohunjin",
+    title: "고훈진 AI 영상 공모전",
+    subtitle: "개인 · 화장품 시네마틱 AI 영상",
+    description: "화장품 브랜드의 프리미엄 이미지를 시네마틱 AI 영상으로 표현.",
+    tags: ["AI 영상", "공모전", "시네마틱"],
+    category: "contest",
+    media: [{ type: "video", url: "/media/gohunjin.mp4" }],
     order: 10,
     visible: true,
     createdAt: Date.now(),
     updatedAt: Date.now(),
   },
   {
-    id: "tryangle",
-    title: "TryAngle IR Deck",
-    subtitle: "사내 AI 해커톤 · IR 발표",
+    id: "restonic",
+    title: "레스토닉 AI 영상 공모전",
+    subtitle: "개인 · 매트리스 브랜드 AI 광고",
     description:
-      "AI Native Camp 해커톤에서 제작한 IR 덱. 문제 정의부터 솔루션, 비즈니스 모델까지 팀 TryAngle의 발표 자료.",
-    tags: ["해커톤", "IR", "기획"],
-    category: "hackathon",
-    media: [{ type: "pdf", url: "/media/tryangle-deck.pdf" }],
+      "제품 특성을 살린 AI 영상 광고 컨셉 기획부터 제작까지 1인 완수.",
+    tags: ["AI 영상", "공모전", "광고"],
+    category: "contest",
+    media: [{ type: "video", url: "/media/restonic.mp4" }],
     order: 11,
     visible: true,
     createdAt: Date.now(),
@@ -203,54 +203,86 @@ export const defaultProjects: Project[] = [
   },
 ];
 
-export async function getProjects(): Promise<Project[]> {
-  if (!isFirebaseConfigured()) return defaultProjects;
+const LOCAL_KEY = "portfolio_projects";
 
-  const firestore = getDbInstance();
-  if (!firestore) return defaultProjects;
-
+function getLocalOverrides(): Record<string, Partial<Project>> {
+  if (typeof window === "undefined") return {};
   try {
-    const q = query(collection(firestore, COLLECTION), orderBy("order", "asc"));
-    const snapshot = await getDocs(q);
-    if (snapshot.empty) return defaultProjects;
-    return snapshot.docs.map(
-      (d) => ({ id: d.id, ...d.data() }) as Project
-    );
-  } catch {
-    return defaultProjects;
+    return JSON.parse(localStorage.getItem(LOCAL_KEY) || "{}");
+  } catch { return {}; }
+}
+
+function saveLocalOverrides(overrides: Record<string, Partial<Project>>) {
+  localStorage.setItem(LOCAL_KEY, JSON.stringify(overrides));
+}
+
+export async function getProjects(): Promise<Project[]> {
+  if (isFirebaseConfigured()) {
+    const firestore = getDbInstance();
+    if (firestore) {
+      try {
+        const q = query(collection(firestore, COLLECTION), orderBy("order", "asc"));
+        const snapshot = await getDocs(q);
+        if (!snapshot.empty) {
+          return snapshot.docs.map((d) => ({ id: d.id, ...d.data() }) as Project);
+        }
+      } catch { /* fall through to defaults */ }
+    }
   }
+
+  const overrides = getLocalOverrides();
+  return defaultProjects.map((p) => ({ ...p, ...overrides[p.id] }));
 }
 
 export async function addProject(
   project: Omit<Project, "id" | "createdAt" | "updatedAt">
 ): Promise<string> {
-  const firestore = getDbInstance();
-  if (!firestore) throw new Error("Firebase가 설정되지 않았습니다.");
-  const now = Date.now();
-  const docRef = await addDoc(collection(firestore, COLLECTION), {
-    ...project,
-    createdAt: now,
-    updatedAt: now,
-  });
-  return docRef.id;
+  if (isFirebaseConfigured()) {
+    const firestore = getDbInstance();
+    if (firestore) {
+      const now = Date.now();
+      const docRef = await addDoc(collection(firestore, COLLECTION), {
+        ...project,
+        createdAt: now,
+        updatedAt: now,
+      });
+      return docRef.id;
+    }
+  }
+  const id = `local_${Date.now()}`;
+  const overrides = getLocalOverrides();
+  overrides[id] = { ...project, id, createdAt: Date.now(), updatedAt: Date.now() } as Project;
+  saveLocalOverrides(overrides);
+  return id;
 }
 
 export async function updateProject(
   id: string,
   data: Partial<Project>
 ): Promise<void> {
-  const firestore = getDbInstance();
-  if (!firestore) throw new Error("Firebase가 설정되지 않았습니다.");
-  await updateDoc(doc(firestore, COLLECTION, id), {
-    ...data,
-    updatedAt: Date.now(),
-  });
+  if (isFirebaseConfigured()) {
+    const firestore = getDbInstance();
+    if (firestore) {
+      await updateDoc(doc(firestore, COLLECTION, id), { ...data, updatedAt: Date.now() });
+      return;
+    }
+  }
+  const overrides = getLocalOverrides();
+  overrides[id] = { ...(overrides[id] || {}), ...data, updatedAt: Date.now() };
+  saveLocalOverrides(overrides);
 }
 
 export async function deleteProject(id: string): Promise<void> {
-  const firestore = getDbInstance();
-  if (!firestore) throw new Error("Firebase가 설정되지 않았습니다.");
-  await deleteDoc(doc(firestore, COLLECTION, id));
+  if (isFirebaseConfigured()) {
+    const firestore = getDbInstance();
+    if (firestore) {
+      await deleteDoc(doc(firestore, COLLECTION, id));
+      return;
+    }
+  }
+  const overrides = getLocalOverrides();
+  overrides[id] = { visible: false };
+  saveLocalOverrides(overrides);
 }
 
 export async function uploadMedia(

@@ -21,9 +21,23 @@ export default function Home() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 0.15], [1, 0.95]);
 
+  const ORDER_KEY = "portfolio_project_order";
+
   const loadProjects = async () => {
     const data = await getProjects();
-    setProjects(data.filter((p) => p.visible));
+    const visible = data.filter((p) => p.visible);
+    const savedOrder = localStorage.getItem(ORDER_KEY);
+    if (savedOrder) {
+      try {
+        const ids: string[] = JSON.parse(savedOrder);
+        visible.sort((a, b) => {
+          const ai = ids.indexOf(a.id);
+          const bi = ids.indexOf(b.id);
+          return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
+        });
+      } catch { /* ignore */ }
+    }
+    setProjects(visible);
   };
 
   useEffect(() => {
@@ -36,6 +50,7 @@ export default function Home() {
     const updated = [...projects];
     [updated[index], updated[swapIndex]] = [updated[swapIndex], updated[index]];
     setProjects(updated);
+    localStorage.setItem(ORDER_KEY, JSON.stringify(updated.map((p) => p.id)));
   };
 
   const stats = [
