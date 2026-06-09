@@ -162,8 +162,9 @@ export default function ProjectCard({
                   >
                     <div className="aspect-[4/3] sm:aspect-video relative overflow-hidden">
                       <iframe
-                        src={`${pdf.url}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
-                        className="absolute -inset-4 w-[calc(100%+2rem)] h-[calc(300%+2rem)] sm:h-[calc(200%+2rem)] border-0 pointer-events-none origin-top"
+                        src={`${pdf.url}#page=1&toolbar=0&navpanes=0&scrollbar=0`}
+                        className="absolute top-0 left-0 border-0 pointer-events-none"
+                        style={{ width: '300%', height: '300%', transform: 'scale(0.3334)', transformOrigin: 'top left' }}
                         title="PDF Preview"
                       />
                       <div className="absolute inset-0 pointer-events-none" style={{
