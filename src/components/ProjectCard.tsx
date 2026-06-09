@@ -83,6 +83,11 @@ export default function ProjectCard({
   const isPdfPreviewable = pdf && pdf.url.endsWith(".pdf");
   const hasVisual = project.id === "zzem" || project.id === "ai-tools";
 
+  const thumbUrl = (url: string) => {
+    const name = url.split("/").pop()?.replace(/\.[^.]+$/, "");
+    return `/media/thumbs/${name}.jpg`;
+  };
+
   return (
     <>
       <ScrollReveal delay={0.1}>
@@ -113,10 +118,12 @@ export default function ProjectCard({
                     <video
                       ref={videoRef}
                       src={video.url}
+                      poster={thumbUrl(video.url)}
                       className="w-full h-full object-cover"
                       muted
                       loop
                       playsInline
+                      preload="none"
                       onMouseEnter={() => videoRef.current?.play()}
                       onMouseLeave={() => {
                         videoRef.current?.pause();
@@ -160,12 +167,11 @@ export default function ProjectCard({
                     rel="noopener noreferrer"
                     className="block rounded-2xl overflow-hidden bg-gray-900 border border-gray-700/50 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/5 transition-all ring-1 ring-gray-800 relative group/pdf"
                   >
-                    <div className="aspect-[4/3] sm:aspect-video relative overflow-hidden">
-                      <iframe
-                        src={`${pdf.url}#page=1&toolbar=0&navpanes=0&scrollbar=0`}
-                        className="absolute border-0 pointer-events-none"
-                        style={{ top: 0, left: '-100%', width: '300%', height: '300%', transform: 'scale(0.3334)', transformOrigin: 'top center' }}
-                        title="PDF Preview"
+                    <div className="aspect-video relative overflow-hidden">
+                      <img
+                        src={thumbUrl(pdf.url)}
+                        alt="PDF Preview"
+                        className="w-full h-full object-contain bg-gray-900"
                       />
                       <div className="absolute inset-0 pointer-events-none" style={{
                         boxShadow: "inset 0 0 12px 8px rgb(17 24 39), inset 0 -20px 20px -5px rgb(17 24 39)",
