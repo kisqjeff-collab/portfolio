@@ -87,12 +87,12 @@ export default function ProjectCard({
     <>
       <ScrollReveal delay={0.1}>
         <div
-          className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 lg:gap-16 items-center`}
+          className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-8 md:gap-16 items-center`}
         >
           {/* Media */}
           <motion.div
             ref={mediaRef}
-            className="w-full lg:w-1/2"
+            className="w-full md:w-1/2"
             style={{
               rotateX: springRotateX,
               rotateY: springRotateY,
@@ -210,7 +210,7 @@ export default function ProjectCard({
           </motion.div>
 
           {/* Content */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full md:w-1/2">
             {project.subtitle && (
               <p className="text-sm font-semibold text-blue-400 mb-2">
                 {project.subtitle}

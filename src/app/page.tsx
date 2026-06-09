@@ -69,7 +69,7 @@ export default function Home() {
 
       {/* Hero */}
       <motion.section
-        className="relative min-h-screen flex flex-col justify-center items-center text-center pt-20 px-8 overflow-hidden"
+        className="relative min-h-[100dvh] flex flex-col justify-center items-center text-center pt-20 px-4 sm:px-8 overflow-hidden"
         style={{ opacity: heroOpacity, scale: heroScale }}
       >
         <GradientBlob />
@@ -82,7 +82,7 @@ export default function Home() {
           >
             AI Native Creator
           </motion.p>
-          <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight mb-8">
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight mb-6 sm:mb-8">
             <TypingText text="AI를 잘 쓰는 게 아니라," speed={60} />
             <br />
             <TypingText
@@ -101,7 +101,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 3 }}
-            className="text-lg text-gray-500 mb-16"
+            className="text-sm sm:text-lg text-gray-500 mb-10 sm:mb-16"
           >
             콘텐츠를 만드는 게 아니라, 콘텐츠가 나오는 구조를 만듭니다.
           </motion.p>
@@ -140,12 +140,12 @@ export default function Home() {
       </div>
 
       {/* Stats */}
-      <section className="py-24 px-8" id="about">
+      <section className="py-16 sm:py-24 px-4 sm:px-8" id="about">
         <ScrollReveal>
           <div className="max-w-4xl mx-auto">
             <div className="relative rounded-2xl bg-gradient-to-r from-blue-500/20 via-gray-800 to-violet-500/20 p-px">
               <div className="bg-gray-900/80 backdrop-blur rounded-2xl p-10">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                   {stats.map((s, i) => (
                     <motion.div
                       key={s.label}
@@ -155,7 +155,7 @@ export default function Home() {
                       viewport={{ once: true }}
                       className="text-center"
                     >
-                      <div className="text-4xl lg:text-5xl font-extrabold bg-gradient-to-b from-blue-400 to-blue-500 bg-clip-text text-transparent">
+                      <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-b from-blue-400 to-blue-500 bg-clip-text text-transparent">
                         <CountUp end={s.num} suffix={s.suffix} />
                       </div>
                       <p className="text-sm text-gray-500 mt-2">{s.label}</p>
@@ -169,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section className="py-24 px-8 relative">
+      <section className="py-16 sm:py-24 px-4 sm:px-8 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-gray-900 to-gray-900/50" />
         <div className="relative max-w-4xl mx-auto">
           <ScrollReveal>
@@ -180,7 +180,7 @@ export default function Home() {
               AI와 함께 일합니다.
             </h2>
           </ScrollReveal>
-          <div className="grid lg:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-2 gap-10">
             <ScrollReveal delay={0.1}>
               <div className="bg-gray-800/50 backdrop-blur rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/5 transition-all">
                 <h3 className="text-sm font-bold text-blue-400 uppercase tracking-wide mb-5">
@@ -240,7 +240,7 @@ export default function Home() {
       </div>
 
       {/* Projects */}
-      <section className="py-24 px-8" id="projects">
+      <section className="py-16 sm:py-24 px-4 sm:px-8" id="projects">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <div className="flex items-end justify-between mb-20">
@@ -287,7 +287,7 @@ export default function Home() {
 
       {/* Contact */}
       <section
-        className="py-32 px-8 bg-gray-950 text-white relative overflow-hidden"
+        className="py-20 sm:py-32 px-4 sm:px-8 bg-gray-950 text-white relative overflow-hidden"
         id="contact"
       >
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
@@ -297,7 +297,7 @@ export default function Home() {
             <p className="text-sm font-semibold text-blue-400 mb-6 tracking-widest uppercase">
               Contact
             </p>
-            <h2 className="text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight mb-8">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight mb-8">
               AI를 잘 쓰는 게 아니라,
               <br />
               AI와 함께 일하는 방식 자체를{" "}

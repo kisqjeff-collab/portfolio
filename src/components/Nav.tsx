@@ -10,11 +10,11 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 bg-gray-950/80 backdrop-blur-xl border-b border-white/5">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-8 py-3 sm:py-5 bg-gray-950/80 backdrop-blur-xl border-b border-white/5">
         <a href="#" className="text-lg font-bold tracking-tight text-white">
           YG<span className="text-blue-400">.</span>
         </a>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 sm:gap-6">
           <a
             href="#projects"
             className="text-sm text-gray-400 hover:text-white transition-colors"
